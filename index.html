@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Grades - Maya Mohammad Salma</title>
+
+  <style>
+    :root{
+      --nav:#0b1b54;
+      --bg:#ffffff;
+      --text:#1b1f2a;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --chip:#f3f4f6;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+    .topbar{
+      background:var(--nav);
+      color:#fff;
+      padding:14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .icon{
+      width:26px;height:26px;border-radius:6px;
+      display:grid;place-items:center;
+      background:rgba(255,255,255,.15);
+      font-size:14px;
+    }
+    .wrap{max-width:820px;margin:0 auto;padding:16px;}
+    .title{
+      font-size:18px;
+      font-weight:600;
+      margin:10px 0 4px;
+    }
+    .subtitle{
+      color:var(--muted);
+      font-size:13px;
+      margin-bottom:14px;
+    }
+    .filters{
+      display:flex;gap:10px;margin-bottom:14px;
+    }
+    select{
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:10px 12px;
+      background:#fff;
+      font-weight:600;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:14px;
+    }
+    .cardhead{
+      display:flex;justify-content:space-between;margin-bottom:10px;
+      font-weight:700;
+    }
+    .info{
+      display:grid;
+      grid-template-columns:140px 1fr;
+      row-gap:8px;
+      column-gap:12px;
+      font-size:14px;
+    }
+    .label{color:var(--muted);font-weight:600}
+    .value{font-weight:600}
+
+    .searchrow{
+      display:flex;justify-content:space-between;
+      margin:16px 0 8px;
+      align-items:center;
+    }
+    .search{
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:10px 12px;
+      width:45%;
+    }
+
+    .course{
+      border-top:1px solid var(--line);
+      padding:14px 0;
+      display:flex;
+      justify-content:space-between;
+    }
+    .course:first-of-type{border-top:none}
+
+    .ctitle{
+      font-weight:700;
+      color:#0f2a6b;
+    }
+    .meta{
+      color:var(--muted);
+      font-size:13px;
+      margin-top:4px;
+    }
+    .gradeCircle{
+      width:44px;height:44px;border-radius:50%;
+      border:2px solid #c7cdd8;
+      display:grid;place-items:center;
+      font-weight:800;
+    }
+    .gradeLabel{
+      font-size:13px;color:var(--muted);margin-top:4px;
+      text-align:right;
+    }
+    .footer{
+      margin-top:18px;
+      font-size:12px;
+      color:var(--muted);
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="icon">☰</div>
+    <div style="display:flex;gap:10px">
+      <div class="icon">⚙️</div>
+      <div class="icon">👤</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="title">
+      Student Grades — Maya Mohammad Salma (202501808)
+    </div>
+    <div class="subtitle">
+      Academic Record
+    </div>
+
+    <div class="filters">
+      <select>
+        <option>Fall 2025–2026</option>
+      </select>
+      <select>
+        <option>Undergraduate</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <div class="cardhead">
+        <div>Primary Curriculum</div>
+        <div style="color:#2563eb">View Details</div>
+      </div>
+
+      <div class="info">
+        <div class="label">Level :</div><div class="value">Undergraduate</div>
+        <div class="label">College :</div><div class="value">College of Business</div>
+        <div class="label">Degree :</div><div class="value">B.A. Business Administration</div>
+        <div class="label">Program :</div><div class="value">B.A. Project Management</div>
+      </div>
+
+      <div class="searchrow">
+        <div style="font-weight:800">Course Work</div>
+        <input class="search" placeholder="Course Title or Subject Code">
+      </div>
+
+      <div class="course">
+        <div>
+          <div class="ctitle">University Writing</div>
+          <div class="meta">ENG 101, F13<br>Attempted Hours : 3.000</div>
+        </div>
+        <div style="text-align:right">
+          <div class="gradeCircle">A+</div>
+          <div class="gradeLabel">Final Grade</div>
+        </div>
+      </div>
+
+      <div class="course">
+        <div>
+          <div class="ctitle">Student Orien. & Acad. Success</div>
+          <div class="meta">COB 100, F<br>Attempted Hours : 1.000</div>
+        </div>
+        <div style="text-align:right">
+          <div class="gradeCircle">A+</div>
+          <div class="gradeLabel">Final Grade</div>
+        </div>
+      </div>
+
+      <div class="course">
+        <div>
+          <div class="ctitle">Principles of Management</div>
+          <div class="meta">MGT 125, F4<br>Attempted Hours : 3.000</div>
+        </div>
+        <div style="text-align:right">
+          <div class="gradeCircle">A</div>
+          <div class="gradeLabel">Final Grade</div>
+        </div>
+      </div>
+
+      <div class="course">
+        <div>
+          <div class="ctitle">Microeconomics</div>
+          <div class="meta">ECO 101, F3<br>Attempted Hours : 3.000</div>
+        </div>
+        <div style="text-align:right">
+          <div class="gradeCircle">B</div>
+          <div class="gradeLabel">Final Grade</div>
+        </div>
+      </div>
+
+      <div class="course">
+        <div>
+          <div class="ctitle">College Math - Pre Calculus</div>
+          <div class="meta">MAT 100, F2<br>Attempted Hours : 3.000</div>
+        </div>
+        <div style="text-align:right">
+          <div class="gradeCircle">D</div>
+          <div class="gradeLabel">Final Grade</div>
+        </div>
+      </div>
+
+      <div class="course">
+        <div>
+          <div class="ctitle">Arabic Language I</div>
+          <div class="meta">ARB 101, F1<br>Attempted Hours : 2.000</div>
+        </div>
+        <div style="text-align:right">
+          <div class="gradeCircle">C</div>
+          <div class="gradeLabel">Final Grade</div>
+        </div>
+      </div>
+
+      <div class="course">
+        <div>
+          <div class="ctitle">Islamic Studies I</div>
+          <div class="meta">ISL 101, F1<br>Attempted Hours : 2.000</div>
+        </div>
+        <div style="text-align:right">
+          <div class="gradeCircle">C</div>
+          <div class="gradeLabel">Final Grade</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        &copy; 2026 Student Information System
+      </div>
+    </div>
+  </div>
+</body>
+</html>
