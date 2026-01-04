@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Official_Academic_Record_Maya</title>
+
+  <style>
+    :root {
+      --navy: #0b1b54;
+      --gray-text: #4b5563;
+      --border: #d1d5db;
+    }
+    
+    * { box-sizing: border-box; }
+    
+    body {
+      margin: 0;
+      padding: 10px;
+      font-family: "Times New Roman", Times, serif;
+      background: #f3f4f6;
+      color: #111827;
+      line-height: 1.4;
+    }
+
+    .pdf-page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border: 1px solid var(--border);
+    }
+
+    .header {
+      border-bottom: 3px solid var(--navy);
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .header-title h1 {
+      margin: 0;
+      font-size: 22px;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .student-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .label {
+      font-weight: bold;
+      color: var(--gray-text);
+      font-size: 11px;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .value {
+      font-size: 15px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .table-container {
+      width: 100%;
+      overflow-x: auto; /* Prevents breaking on mobile */
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 500px; /* Ensures text doesn't squish too much */
+    }
+
+    th {
+      text-align: left;
+      border-top: 2px solid var(--navy);
+      border-bottom: 2px solid var(--navy);
+      padding: 10px 5px;
+      font-size: 11px;
+      text-transform: uppercase;
+      background: #fafafa;
+    }
+
+    td {
+      padding: 12px 5px;
+      border-bottom: 1px solid #f3f4f6;
+      font-size: 14px;
+    }
+
+    .grade-cell {
+      font-weight: bold;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 11px;
+      color: var(--gray-text);
+      border-top: 1px solid var(--border);
+      padding-top: 15px;
+    }
+
+    @media print {
+      body { background: none; padding: 0; }
+      .pdf-page { box-shadow: none; border: none; width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pdf-page">
+    <div class="header">
+      <div class="header-title">
+        <h1>Official Academic Record</h1>
+        <p style="margin: 5px 0 0; font-size: 12px; color: var(--gray-text);">Issued on: January 4, 2026</p>
+      </div>
+      <div style="text-align: right; font-size: 13px;">
+        <span class="label">Student ID</span>
+        <span class="value">202501000</span>
+      </div>
+    </div>
+
+    <div class="student-info">
+      <div>
+        <span class="label">Student Name</span>
+        <span class="value">Maya Mohammad Salma</span>
+        
+        <span class="label">Academic Level</span>
+        <span class="value">Undergraduate</span>
+      </div>
+      <div>
+        <span class="label">College / Program</span>
+        <span class="value">College of Business / B.A. Project Management</span>
+        
+        <span class="label">Degree</span>
+        <span class="value">B.A. Business Administration</span>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 60%;">Course Code & Title</th>
+            <th style="text-align: center;">Attempted Hours</th>
+            <th style="text-align: center;">Final Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ENG 101, F13</strong> - University Writing</td>
+            <td style="text-align: center;">3.00</td>
+            <td class="grade-cell">A+</td>
+          </tr>
+          <tr>
+            <td><strong>COB 100, F</strong> - Student Orien. & Acad. Success</td>
+            <td style="text-align: center;">1.00</td>
+            <td class="grade-cell">A+</td>
+          </tr>
+          <tr>
+            <td><strong>MGT 125, F4</strong> - Principles of Management</td>
+            <td style="text-align: center;">3.00</td>
+            <td class="grade-cell">A</td>
+          </tr>
+          <tr>
+            <td><strong>ECO 101, F3</strong> - Microeconomics</td>
+            <td style="text-align: center;">3.00</td>
+            <td class="grade-cell">B</td>
+          </tr>
+          <tr>
+            <td><strong>MAT 100, F2</strong> - College Math - Pre Calculus</td>
+            <td style="text-align: center;">3.00</td>
+            <td class="grade-cell">D</td>
+          </tr>
+          <tr>
+            <td><strong>ARB 101, F1</strong> - Arabic Language I</td>
+            <td style="text-align: center;">2.00</td>
+            <td class="grade-cell">C</td>
+          </tr>
+          <tr>
+            <td><strong>ISL 101, F1</strong> - Islamic Studies I</td>
+            <td style="text-align: center;">2.00</td>
+            <td class="grade-cell">C</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      This is an official electronic transcript from Alfaisal University.<br>
+      Any alteration to this document renders it invalid.
+    </div>
+  </div>
+</body>
+</html>
